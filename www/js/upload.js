@@ -79,7 +79,7 @@ $(function () {
                         // 取出 base64 格式数据
                         var dataURL = canvas.toDataURL('image/png');
 
-                        $('<li class="weui_uploader_file" style="background-image:url(' + dataURL + ')"></li>').appendTo('.weui_uploader_files');
+                        $('<div class="col-md-3" style="background-image:url(' + dataURL + ');"></div>').appendTo('.pic');
                         files.push({
                             name: file.name,
                             dataURL: dataURL
@@ -87,13 +87,15 @@ $(function () {
 
                         // 压缩后大小
                         var after = dataURItoBlob(dataURL);
-                        console.log('压缩后', after.size / 1024);
+                        $('.before').html('压缩后：' + after.size / 1024 + 'KB');
+                        //console.log('压缩后', after.size / 1024);
                     };
 
                     // 压缩前大小
 
                     var before = dataURItoBlob(reader.result);
-                    console.log('压缩前', before.size / 1024);
+                    $('.after').html('压缩前：' + before.size / 1024 + 'KB');
+                    //console.log('压缩前', before.size / 1024);
 
                     img.src = reader.result;
 
@@ -111,7 +113,7 @@ $(function () {
         }
     });
 
-    $('#upload').on('click', function (e) {
+    $('.btn-primary').on('click', function (e) {
 
         if (files.length === 0) {
             return;

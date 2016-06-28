@@ -8,12 +8,11 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "gulp-sourcemaps": "^1.6.0",
     "morgan": "^1.7.0",
+    "multer": "^1.1.0",
     "path": "^0.12.7"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "description": "采用node做服务端，实现的文件上传功能，带有上传进度提示",
   "main": "http.js",
   "repository": {

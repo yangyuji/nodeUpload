@@ -6,26 +6,52 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>文件上传</title>
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap//3.3.6/css/bootstrap.min.css"/>
+    <style>
+        .pic {
+            min-height: 140px;
+        }
+        .pic > .col-md-3 {
+            min-height: 200px;
+            max-width: 200px;
+            border: 1px solid #ccc;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #ccc;
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
-        <form>
-            <div class="form-group">
-                <label for="fileName">file name</label>
-                <input type="text" class="form-control" id="fileName" placeholder="文件名称">
-            </div>
-            <div class="form-group">
-                <label for="inputFile">File input</label>
-                <input type="file" id="inputFile" accept="image/jpg,image/jpeg,image/png,image/gif">
-            </div>
+
+        <div class="form-group">
+            <label for="fileName">file name</label>
+            <input type="text" class="form-control" id="fileName" placeholder="文件名称">
+        </div>
+        <div class="form-group">
+            <label for="inputFile">File input</label>
+            <input type="file" id="inputFile" accept="image/jpg,image/jpeg,image/png,image/gif">
+        </div>
+
+        <div class="form-group">
+            <div class="pic"></div>
+        </div>
+
+        <div class="form-group">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+
+        <div class="form-group">
             <div class="progress">
                 <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
                     0% Complete
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
     </div>
     
     <script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
