@@ -38,6 +38,7 @@ $(function () {
                     if (evt.lengthComputable) {
                         var percentComplete = evt.loaded / evt.total;
                         // 本地 server 速度会很快, 可以在 Chrome 开发者工具限制网速来模拟
+                        $('.progress-bar').css('width',percentComplete.toFixed(2) * 100 + '%').html(percentComplete.toFixed(2) * 100 + '% Complete');
                         console.log('进度', percentComplete);
                     }
                 }, false);
