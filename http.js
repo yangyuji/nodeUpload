@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'www'));
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '监控页面' });
+  res.render('index', { title: '上传页面' });
 });
 
 app.listen(config.port, config.host, function() {
