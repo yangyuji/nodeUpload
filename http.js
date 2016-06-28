@@ -1,8 +1,8 @@
+'use strict';
 
 var express = require('express')
   , path = require('path')
   , app = express()
-  , fs = require('fs')
   , logger = require('morgan')
   , multer  = require('multer');
 
