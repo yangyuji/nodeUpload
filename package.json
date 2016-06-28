@@ -1,12 +1,16 @@
 {
-  "name": "nodeUpload",
+  "name": "node-upload",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./build"
   },
   "dependencies": {
-    "gulp-sourcemaps": "^1.6.0"
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "browser-sync": "^2.13.0",
@@ -23,5 +27,20 @@
     "gulp-watch": "^4.3.5",
     "imagemin-pngquant": "^4.2.0",
     "run-sequence": "^1.2.0"
-  }
+  },
+  "description": "采用node做服务端，实现的文件上传功能，带有上传进度提示",
+  "main": "http.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangyuji/nodeUpload.git"
+  },
+  "keywords": [
+    "upload"
+  ],
+  "author": "oujizeng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangyuji/nodeUpload/issues"
+  },
+  "homepage": "https://github.com/yangyuji/nodeUpload#readme"
 }
