@@ -44,7 +44,7 @@ $(function () {
                     return xhr;
                 }
             }).success(function (res) {
-                alert(res);
+                console.log(res);
             }).error(function (err) {
                 console.log(err);
             });
