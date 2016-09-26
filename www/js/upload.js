@@ -70,7 +70,7 @@ $(function () {
                 // 把图片绘制到 canvas 中
                 ctx.drawImage(img, 0, 0, w, h);
 
-                // 取出 base64 格式数据
+                // 取出DataURL
                 return canvas.toDataURL('image/png');
             }
             catch(err){
@@ -92,7 +92,7 @@ $(function () {
 
                     img.onload = function () {
                         
-                        // 取出 base64 格式数据
+                        // 取出压缩后的dataURL
                         var dataURL = ctr.compresse(img);
 
                         $('<div class="col-md-3" style="background-image:url(' + dataURL + ');"></div>').appendTo('.pic');
@@ -118,7 +118,7 @@ $(function () {
                     console.error('reader error');
                 };
 
-                // 读出base64格式
+                // 读出文件路径
                 reader.readAsDataURL(file);
             } else {
                 throw '只能上传图片';
